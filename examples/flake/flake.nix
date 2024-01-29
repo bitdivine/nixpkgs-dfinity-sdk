@@ -5,24 +5,15 @@
     dfinity-sdk = {
       # url = "github:paulyoung/nixpkgs-dfinity-sdk";
       url = "../../";
-      flake = false;
     };
   };
 
   outputs = { self, nixpkgs, flake-utils, dfinity-sdk }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [
-            (final: prev: (import dfinity-sdk) final prev)
-          ];
-        };
+        pkgs = import nixpkgs {inherit system;};
 
-        dfinitySdk = (pkgs.dfinity-sdk {
-          acceptLicenseAgreement = true;
-          sdkSystem = system;
-        })."0.15.2";
+        dfinitySdk = dfinity-sdk.packages."${system}".default;
       in
         {
           # `nix build`

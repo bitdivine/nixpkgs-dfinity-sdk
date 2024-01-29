@@ -1,19 +1,40 @@
 {
   "nodes": {
     "dfinity-sdk": {
-      "flake": false,
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-HEUMnJTFSyt3wbbTmVbsm9105U347p5SQbcjM+dc2Vs=",
-        "path": "/nix/store/n2sb5yxwwzyd6vgx8hbhfbwq29j8n69i-source",
+        "narHash": "sha256-08e4OER7iKhB1RDHt2Wsu9v2Y3MetPSrYevLUykPG1k=",
+        "path": "/nix/store/bwvlpw2df0pxkkhsjmf9q542jc407xsn-source",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/n2sb5yxwwzyd6vgx8hbhfbwq29j8n69i-source",
+        "path": "/nix/store/bwvlpw2df0pxkkhsjmf9q542jc407xsn-source",
         "type": "path"
       }
     },
     "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1705309234,
+        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
       "locked": {
         "lastModified": 1644229661,
         "narHash": "sha256-1YdnJAsNy69bpcjuoKdOYQX0YxZBiCYZo4Twxerqv7k=",
@@ -29,6 +50,21 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1706521044,
+        "narHash": "sha256-bC6+/nCtpFxLlLIk0Xri7ZhgBVSDv6TBtpFdjvFQXuU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "327b7e010458028a6595460f848dcea6428a57c2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1706281200,
         "narHash": "sha256-+X2OEDAMT7SqDcFOQNxTnq4CZxrfnhIImdcYhLO6/4w=",
@@ -46,8 +82,23 @@
     "root": {
       "inputs": {
         "dfinity-sdk": "dfinity-sdk",
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },

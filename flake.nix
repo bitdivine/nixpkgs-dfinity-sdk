@@ -72,7 +72,7 @@
 
               mkdir -p $out/bin
 
-              for binary in dfx ic-ref ic-starter icx-proxy mo-doc mo-ide moc replica; do
+              for binary in $(ls $CACHE_DIR); do
                 ${pkgs.lib.optionalString pkgs.stdenv.isLinux ''
                 local BINARY="$CACHE_DIR/$binary"
                 test -f "$BINARY" || continue
